@@ -14,11 +14,11 @@ public class DeliveryInput {
 
 	@Valid
 	@NotNull
-	private ClientIdInput clientIdInput;
+	private ClientIdInput client;
 	
 	@Valid
 	@NotNull
-	private RecipientInput recipientInput;
+	private RecipientInput recipient;
 	
 	@NotNull
 	private BigDecimal tax;
