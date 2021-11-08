@@ -1,6 +1,6 @@
-## API para a criação, edição, atualização e deleção de clientes, entregas e ocorrências das entregas.
+## API para a criação, edição, atualização e deleção de clientes, entregas e ocorrências de entregas.
 
-Foi desenvolvido junto ao curso Mergulho Spring Rest ministrado pela AlgaWorks, você pode acessar o repositório original clicando [aqui](https://github.com/algaworks/curso-mergulho-spring-rest)
+Foi desenvolvido junto ao curso Mergulho Spring Rest ministrado pela AlgaWorks, você pode acessar o repositório original clicando [aqui](https://github.com/algaworks/curso-mergulho-spring-rest).
 
 Foi desenvolvido utilizando as seguintes tecnologias: <br>
 <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white"/>
@@ -8,8 +8,19 @@ Foi desenvolvido utilizando as seguintes tecnologias: <br>
 <img src="https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white"/>
 <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/>
 <img src="https://img.shields.io/badge/Lombok-ED8B00?color=red&style=for-the-badge&logo=lombok"/>
-<img src="https://img.shields.io/badge/Flyway-ED8B00?color=blue&style=for-the-badge&logo=flyway"/ />>
+<img src="https://img.shields.io/badge/Flyway-ED8B00?color=blue&style=for-the-badge&logo=flyway"/>
 
 ### Coisas que aprendi:
 
+# Mapeamento de requisições HTTP dentro da API. <br/>
+# Embutir uma classe¹ na classe² sem que haja necessidade de criar a tabela¹, usando a annotation @Embeddable e @Embedded.
+# Versionar o banco de dados MySql com o Flyway.
+# Tratamento de códigos de resposta HTTP (200, 404...).
+# Uso da biblioteca ModelMapper para mapeamento Model <> DTO.
+# Redução de código Boilerplate com o Lombok.
 
+
+### Coisas que modifiquei em relação ao projeto original:
+
+# Correção do fluxo de acesso das classes de repositório, serviço e controle, no projeto original camada de controle dependiam de ambas as camadas de serviço e repositório, cruzando a responsabilidade da camada de serviço.
+# Criação de classes DTO em vez de modelo representacional e modelo de entrada de dados.
