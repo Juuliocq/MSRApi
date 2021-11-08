@@ -1,8 +1,7 @@
-You can also read this document in [Portuguese](README.md)
+You can also read this document in [portuguese](README.md).
 
 # API for create, read, update and delete clients, deliverys and deliverys occurrences.
 
-Foi desenvolvido junto ao curso Mergulho Spring Rest ministrado pela AlgaWorks, você pode acessar o repositório original clicando [aqui](https://github.com/algaworks/curso-mergulho-spring-rest).
 It was developed along with the course Mergulho Spring Rest by AlgaWorks, you can see the original repository clicking [here](https://github.com/algaworks/curso-mergulho-spring-rest).
 
 Uses the following technologies: <br>

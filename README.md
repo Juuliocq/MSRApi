@@ -1,4 +1,4 @@
-Você pode ler esse documento também em [Inglês](README-en.md)
+Você pode ler esse documento também em [inglês](README-en.md).
 
 # API para a criação, edição, atualização e deleção de clientes, entregas e ocorrências de entregas.
 
