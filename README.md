@@ -1,3 +1,5 @@
+Você pode ler esse documento também em [Inglês](README-en.md)
+
 # API para a criação, edição, atualização e deleção de clientes, entregas e ocorrências de entregas.
 
 Foi desenvolvido junto ao curso Mergulho Spring Rest ministrado pela AlgaWorks, você pode acessar o repositório original clicando [aqui](https://github.com/algaworks/curso-mergulho-spring-rest).
