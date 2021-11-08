@@ -11,9 +11,10 @@ Foi desenvolvido utilizando as seguintes tecnologias: <br>
 <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/>
 <img src="https://img.shields.io/badge/Lombok-ED8B00?color=red&style=for-the-badge&logo=lombok"/>
 <img src="https://img.shields.io/badge/Flyway-ED8B00?color=blue&style=for-the-badge&logo=flyway"/>
+<br/>
+<br/>
 
 ## Coisas que aprendi:
-<br/>
 <br/>
 
 - Mapeamento de requisições HTTP dentro da API. <br/>
@@ -22,10 +23,10 @@ Foi desenvolvido utilizando as seguintes tecnologias: <br>
 - Tratamento de códigos de resposta HTTP (200, 404...). <br/
 - Uso da biblioteca ModelMapper para mapeamento Model <> DTO. <br/>
 - Redução de código Boilerplate com o Lombok. <br/>
-
+<br/>
+<br/>
 
 ## Coisas que modifiquei em relação ao projeto original: 
-<br/>
 <br/>
 
 - Correção do fluxo de acesso das classes de repositório, serviço e controle, no projeto original camada de controle dependiam de ambas as camadas de serviço e repositório, cruzando a responsabilidade da camada de serviço. <br/>

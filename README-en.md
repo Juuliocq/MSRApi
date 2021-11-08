@@ -11,9 +11,10 @@ Uses the following technologies: <br>
 <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white"/>
 <img src="https://img.shields.io/badge/Lombok-ED8B00?color=red&style=for-the-badge&logo=lombok"/>
 <img src="https://img.shields.io/badge/Flyway-ED8B00?color=blue&style=for-the-badge&logo=flyway"/>
+<br/>
+<br/>
 
 ## Things i learned:
-<br/>
 <br/>
 
 - HTTP request mapping inside API. <br/>
@@ -21,11 +22,11 @@ Uses the following technologies: <br>
 - Database versioning using Flyway.. <br/>
 - Handling of HTTP reponse codes(201, 404...). <br/
 - Use of ModelMapper library for Model <> DTO conversion. <br/>
-- Boilerplate code reducing with Lombok. <br/>
-
+- Boilerplate code reduced with Lombok. <br/>
+<br/>
+<br/>
 
 ## Things i changed from the original project: 
-<br/>
 <br/>
 
 - Correction of the access flow of repository, service and control classes, in the original design control layer depended on both the service and repository layers, crossing the responsibility of the service layer. <br/>
