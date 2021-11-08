@@ -11,18 +11,20 @@ Foi desenvolvido utilizando as seguintes tecnologias: <br>
 <img src="https://img.shields.io/badge/Flyway-ED8B00?color=blue&style=for-the-badge&logo=flyway"/>
 
 ## Coisas que aprendi:
-<br>
+<br/>
+<br/>
 
-Mapeamento de requisições HTTP dentro da API. <br/>
-Embutir uma classe¹ na classe² sem que haja necessidade de criar a tabela¹, usando a annotation @Embeddable e @Embedded.
-Versionar o banco de dados MySql com o Flyway.
-Tratamento de códigos de resposta HTTP (200, 404...).
-Uso da biblioteca ModelMapper para mapeamento Model <> DTO.
-Redução de código Boilerplate com o Lombok.
+- Mapeamento de requisições HTTP dentro da API. <br/>
+- Embutir uma classe¹ na classe² sem que haja necessidade de criar a tabela¹, usando a annotation @Embeddable e @Embedded. <br/>
+- Versionar o banco de dados MySql com o Flyway. <br/>
+- Tratamento de códigos de resposta HTTP (200, 404...). <br/
+- Uso da biblioteca ModelMapper para mapeamento Model <> DTO. <br/>
+- Redução de código Boilerplate com o Lombok. <br/>
 
 
 ## Coisas que modifiquei em relação ao projeto original: 
-<br>
+<br/>
+<br/>
 
-Correção do fluxo de acesso das classes de repositório, serviço e controle, no projeto original camada de controle dependiam de ambas as camadas de serviço e repositório, cruzando a responsabilidade da camada de serviço.
-Criação de classes DTO em vez de modelo representacional e modelo de entrada de dados.
+- Correção do fluxo de acesso das classes de repositório, serviço e controle, no projeto original camada de controle dependiam de ambas as camadas de serviço e repositório, cruzando a responsabilidade da camada de serviço. <br/>
+- Criação de classes DTO em vez de modelo representacional e modelo de entrada de dados.
