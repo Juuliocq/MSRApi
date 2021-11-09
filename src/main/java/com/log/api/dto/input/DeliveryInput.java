@@ -1,4 +1,4 @@
-package com.log.api.model.input;
+package com.log.api.dto.input;
 
 import java.math.BigDecimal;
 

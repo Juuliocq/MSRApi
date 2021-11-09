@@ -18,8 +18,8 @@ Uses the following technologies: <br>
 <br/>
 
 - HTTP request mapping inside API. <br/>
-- Embed a class¹ in class² without creating the table¹ in database, using the @Embeddable and @Embedded annotation . <br/>
-- Database versioning using Flyway.. <br/>
+- Embed a class¹ in class² without creating the table¹ in database, using the @Embeddable and @Embedded annotation. <br/>
+- Database versioning using Flyway. <br/>
 - Handling of HTTP reponse codes(201, 404...). <br/
 - Use of ModelMapper library for Model <> DTO conversion. <br/>
 - Boilerplate code reduced with Lombok. <br/>

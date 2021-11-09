@@ -14,8 +14,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.log.api.assembler.OccurrenceAssembler;
-import com.log.api.model.OccurrenceRepresentationalModel;
-import com.log.api.model.input.OccurrenceInput;
+import com.log.api.dto.OccurrenceDTO;
 import com.log.domain.model.Delivery;
 import com.log.domain.model.Occurrence;
 import com.log.domain.service.FindDeliveryService;
@@ -31,19 +30,26 @@ public class OccurenceController {
 	private RecordOccurrenceService recordOccurrenceService;
 	private OccurrenceAssembler occurrenceAssembler;
 	private FindDeliveryService findDeliveryService;
-	
+
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
-	public OccurrenceRepresentationalModel record(@PathVariable Long deliveryId, @Valid @RequestBody OccurrenceInput occurrenceInput) {
-		Occurrence recordedOccurrence = recordOccurrenceService.record(deliveryId, occurrenceInput.getDescription());
-		
+	public OccurrenceDTO record(@PathVariable Long deliveryId, @Valid @RequestBody OccurrenceDTO occurrenceDTO) {
+		Occurrence recordedOccurrence = recordOccurrenceService.record(deliveryId, occurrenceDTO.getDescription());
+
 		return occurrenceAssembler.toModel(recordedOccurrence);
 	}
-	
+
 	@GetMapping
-	public List<OccurrenceRepresentationalModel> list(@PathVariable Long deliveryId){
+	public List<OccurrenceDTO> find(@PathVariable Long deliveryId) {
 		Delivery delivery = findDeliveryService.find(deliveryId);
-		
+
+		return occurrenceAssembler.toCollectionModel(delivery.getOcurrences());
+	}
+
+	@GetMapping
+	public List<OccurrenceDTO> list(@PathVariable Long deliveryId) {
+		Delivery delivery = findDeliveryService.find(deliveryId);
+
 		return occurrenceAssembler.toCollectionModel(delivery.getOcurrences());
 	}
 }

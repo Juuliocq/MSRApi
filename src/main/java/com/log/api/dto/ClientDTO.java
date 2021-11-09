@@ -1,11 +1,11 @@
-package com.log.api.model;
+package com.log.api.dto;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class ClientRepresentationalModel {	
+public class ClientDTO {	
 
 	private Long id;
 	private String name;

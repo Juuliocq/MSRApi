@@ -1,4 +1,4 @@
-package com.log.api.model;
+package com.log.api.dto;
 
 import java.time.OffsetDateTime;
 
@@ -7,7 +7,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class OccurrenceRepresentationalModel {
+public class OccurrenceDTO {
 
 	private Long id;
 	private String description;

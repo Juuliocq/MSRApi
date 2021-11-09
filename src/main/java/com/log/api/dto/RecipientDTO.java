@@ -1,11 +1,11 @@
-package com.log.api.model;
+package com.log.api.dto;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class RecipientRepresentationalModel {
+public class RecipientDTO {
 
 	private String name;
 	private String address;

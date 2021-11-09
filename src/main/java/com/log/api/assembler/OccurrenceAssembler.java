@@ -6,8 +6,7 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import com.log.api.model.OccurrenceRepresentationalModel;
-import com.log.api.model.input.OccurrenceInput;
+import com.log.api.dto.OccurrenceDTO;
 import com.log.domain.model.Occurrence;
 
 import lombok.AllArgsConstructor;
@@ -18,16 +17,16 @@ public class OccurrenceAssembler {
 	
 	private ModelMapper modelMapper;
 	
-	public OccurrenceRepresentationalModel toModel(Occurrence occurrence) {
-		return modelMapper.map(occurrence, OccurrenceRepresentationalModel.class);
+	public OccurrenceDTO toModel(Occurrence occurrence) {
+		return modelMapper.map(occurrence, OccurrenceDTO.class);
 	}
 	
-	public List<OccurrenceRepresentationalModel> toCollectionModel(List<Occurrence> Occurrences){
+	public List<OccurrenceDTO> toCollectionModel(List<Occurrence> Occurrences){
 		return Occurrences.stream().map(this::toModel).collect(Collectors.toList());
 	}
 	
-	public Occurrence toEntity(OccurrenceInput occurrenceInput) {
-		return modelMapper.map(occurrenceInput, Occurrence.class);
+	public Occurrence toEntity(OccurrenceDTO occurrenceDTO) {
+		return modelMapper.map(occurrenceDTO, Occurrence.class);
 	}
 
 }

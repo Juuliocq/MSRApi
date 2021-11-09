@@ -1,4 +1,4 @@
-package com.log.api.model;
+package com.log.api.dto;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
@@ -10,11 +10,11 @@ import lombok.Setter;
 
 @Setter
 @Getter
-public class DeliveryRepresentationalModel {
+public class DeliveryDTO {
 
 	private Long id;
-	private ClientResumedModel client;
-	private RecipientRepresentationalModel recipient;
+	private ClientResumedDTO client;
+	private RecipientDTO recipient;
 	private BigDecimal tax;
 	private StatusDelivery status;
 	private OffsetDateTime orderDate;

@@ -16,8 +16,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.log.api.assembler.DeliveryAssembler;
-import com.log.api.model.DeliveryRepresentationalModel;
-import com.log.api.model.input.DeliveryInput;
+import com.log.api.dto.DeliveryDTO;
 import com.log.domain.model.Delivery;
 import com.log.domain.repository.DeliveryRepository;
 import com.log.domain.service.CreateDeliveryService;
@@ -36,12 +35,12 @@ public class DeliveryController {
 	private DeliveryCheckoutService deliveryCheckoutService;
 	
 	@GetMapping
-	public List<DeliveryRepresentationalModel> list(){
+	public List<DeliveryDTO> list(){
 		return deliveryAssembler.toCollectionModel(deliveryRepository.findAll());
 	}
 	
 	@GetMapping("/{deliveryId}")
-	public ResponseEntity<DeliveryRepresentationalModel> find(@PathVariable long deliveryId){
+	public ResponseEntity<DeliveryDTO> find(@PathVariable long deliveryId){
 		return deliveryRepository.findById(deliveryId)
 				.map(delivery -> ResponseEntity.ok(deliveryAssembler.toModel(delivery)))
 				.orElse(ResponseEntity.notFound().build());
@@ -49,8 +48,8 @@ public class DeliveryController {
 	
 	@PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-	public DeliveryRepresentationalModel requestDelivery(@Valid @RequestBody DeliveryInput deliveryInput) {
-		Delivery delivery = deliveryAssembler.toEntity(deliveryInput);
+	public DeliveryDTO requestDelivery(@Valid @RequestBody DeliveryDTO deliveryDTO) {
+		Delivery delivery = deliveryAssembler.toEntity(deliveryDTO);
 		
 		return deliveryAssembler.toModel(createDeliveryService.request(delivery));
 	}

@@ -6,8 +6,7 @@ import java.util.stream.Collectors;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import com.log.api.model.DeliveryRepresentationalModel;
-import com.log.api.model.input.DeliveryInput;
+import com.log.api.dto.DeliveryDTO;
 import com.log.domain.model.Delivery;
 
 import lombok.AllArgsConstructor;
@@ -18,15 +17,15 @@ public class DeliveryAssembler {
 
 	private ModelMapper modelMapper;
 	
-	public DeliveryRepresentationalModel toModel(Delivery delivery) {
-		return modelMapper.map(delivery, DeliveryRepresentationalModel.class);
+	public DeliveryDTO toModel(Delivery delivery) {
+		return modelMapper.map(delivery, DeliveryDTO.class);
 	}
 	
-	public List<DeliveryRepresentationalModel> toCollectionModel(List<Delivery> deliveries){
+	public List<DeliveryDTO> toCollectionModel(List<Delivery> deliveries){
 		return deliveries.stream().map(this::toModel).collect(Collectors.toList());
 	}
 	
-	public Delivery toEntity(DeliveryInput deliveryInput) {
-		return modelMapper.map(deliveryInput, Delivery.class);
+	public Delivery toEntity(DeliveryDTO deliveryDTO) {
+		return modelMapper.map(deliveryDTO, Delivery.class);
 	}
 }
