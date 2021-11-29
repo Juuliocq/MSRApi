@@ -20,7 +20,7 @@ Foi desenvolvido utilizando as seguintes tecnologias: <br>
 - Mapeamento de requisições HTTP dentro da API. <br/>
 - Embutir uma classe¹ na classe² sem que haja necessidade de criar a tabela¹, usando a annotation @Embeddable e @Embedded. <br/>
 - Versionar o banco de dados MySql com o Flyway. <br/>
-- Tratamento de códigos de resposta HTTP (200, 404...). <br/
+- Tratamento de códigos de resposta HTTP (200, 404...). <br/>
 - Uso da biblioteca ModelMapper para mapeamento Model <> DTO. <br/>
 - Redução de código Boilerplate com o Lombok. <br/>
 <br/>
